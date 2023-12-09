@@ -53,7 +53,7 @@ namespace BBDown.Core
                     $"&fnval=4048&fnver=0&fourk=1" +
                     $"&mid=0&mobi_app=android_tv_yst" +
                     $"&playurl_type=1&platform=android" +
-                    $"&qn={qn}";)
+                    $"&qn={qn}";
             }
             else
             {

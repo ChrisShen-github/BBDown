@@ -54,6 +54,7 @@ namespace BBDown.Core
                     $"&mid=0&mobi_app=android_tv_yst" +
                     $"&playurl_type=1&platform=android" +
                     $"&qn={qn}";
+                api = prefix + api;
             }
             else
             {

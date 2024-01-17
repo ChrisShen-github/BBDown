@@ -49,9 +49,11 @@ namespace BBDown.Core
             {
                 api = (Config.TOKEN != "" ? $"access_key={Config.TOKEN}&" : "") +
                     $"object_id={aid}&appkey=4409e2ce8ffd12b8&build=106500" +
-                    $"&cid={cid}&device=android&fnval=4048&fnver=0&fourk=1" +
+                    $"&cid={cid}&device=android" +
+                    $"&fnval=4048&fnver=0&fourk=1" +
                     $"&mid=0&mobi_app=android_tv_yst" +
-                    $"&playurl_type=1&platform=android&qn={qn}";
+                    $"&playurl_type=1&platform=android" +
+                    $"&qn={qn}";
                 api = prefix + api;
             }
             else
@@ -60,6 +62,7 @@ namespace BBDown.Core
                 StringBuilder apiBuilder = new();
                 apiBuilder.Append($"avid={aid}&cid={cid}&fnval=4048&fnver=0&fourk=1");
                 if (Config.AREA != "") apiBuilder.Append($"&access_key={Config.TOKEN}&area={Config.AREA}");
+
                 apiBuilder.Append($"&otype=json&qn={qn}");
                 if (bangumi) apiBuilder.Append($"&module=bangumi&ep_id={epId}&session=");
                 else if (!tvApi)
